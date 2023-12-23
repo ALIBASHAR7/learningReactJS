@@ -1,9 +1,14 @@
 import React from "react";
-import {link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import ContactCard from "./ContactCard";
+import Header from "./Header";
 
 
 const ContactList = (props) => {
+
+    const navigate =  useNavigate();
+
+
     console.log(props);
 // render matlab dikhana(show kar na)
     const deleteContactHandler = (id) =>{
@@ -31,9 +36,9 @@ const ContactList = (props) => {
     return (
         <div class ="main">
             <h2>Contanct List
-                <link to="/add"> 
-                    <button className="ui button blue right">Add Contact</button>
-                </link>
+                <div> 
+                    <button onClick={() => navigate("/add")} className="ui button blue right">Add Contact</button>
+                </div>
             </h2>
            <div className="ui celled list"> {renderContactList}
         </div>

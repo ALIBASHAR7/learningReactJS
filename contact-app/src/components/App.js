@@ -54,18 +54,18 @@ function App(){
 
     return (
         <div className='ui container'>
+            <Header />
             <BrowserRouter>
-                {/* <Header/> */}
                 <Routes>
-            <Route
-                path="/"
-                element={() => <ContactList contacts={contacts} getContactId={removeContactHandler} />}
-            />
-            <Route
-                path="/add"
-                element={() => <AddContact addContactHandler={addContactHandler} />}
-            />
-        </Routes>
+                    <Route
+                        path="/"
+                        element={<ContactList contacts={contacts} getContactId={removeContactHandler} />}
+                    />
+                    <Route
+                        path="/add"
+                        element={<AddContact addContactHandler={addContactHandler} />}
+                    />
+                </Routes>
             </BrowserRouter>
         </div>
     );
