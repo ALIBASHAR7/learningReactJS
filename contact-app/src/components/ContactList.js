@@ -2,6 +2,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import ContactCard from "./ContactCard";
 import Header from "./Header";
+import AddContact from "./AddContact";
 
 
 const ContactList = (props) => {
@@ -9,19 +10,13 @@ const ContactList = (props) => {
     const navigate =  useNavigate();
 
 
+
     console.log(props);
-// render matlab dikhana(show kar na)
+    // render matlab dikhana(show kar na)
     const deleteContactHandler = (id) =>{
         props.getContactId(id);
     };
 
-    // const contacts =[
-    //     {
-    //         id : "1",
-    //         name : "ABC",
-    //         email : "MDGJ@gmail.com",
-    //     },
-    // ];
 
     const renderContactList = props.contacts.map((contact) => {
         return (

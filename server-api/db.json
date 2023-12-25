@@ -1,0 +1,26 @@
+{
+  "contacts": [
+    [
+      {
+        "id": "2883b715-219b-4b6a-ab62-49230087d993",
+        "name": "ss",
+        "email": "alibasharalibashar7@gmail.com"
+      },
+      {
+        "id": "ae24c5d2-4711-4ac7-af46-b74fedb3b5d6",
+        "name": "Ali Bashar",
+        "email": "alibasharalibashar7@gmail.com"
+      }
+    ],
+    {
+      "id": "97759bb7-b4be-4359-8e7e-8a2848c122f1",
+      "name": "Ali Bashar",
+      "email": "mdalibashar7@gmail.com"
+    },
+    {
+      "id": "37eaa184-e19c-4a1d-8884-defff30641d5",
+      "name": "s",
+      "email": "ss"
+    }
+  ]
+}
