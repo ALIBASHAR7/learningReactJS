@@ -70,6 +70,7 @@ const AddContact = (props) => {
   const changeHandeler = (e) => {
     let newState = {...state};
     newState[e.target.name] = e.target.value;
+    console.log(e.value.target);
     setState({...newState})
     console.log(state)
   }

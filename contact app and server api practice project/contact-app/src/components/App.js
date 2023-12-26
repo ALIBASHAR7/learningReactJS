@@ -36,12 +36,18 @@ function App() {
     // localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify([...contacts,contact]));
   };
 
+
+  const updateContactHandler = () => {
+
+  }
+
   // const deleteHandler = (id) => {
   //     let c = [...contacts]
   //     console.log(c)
   // }
 
-  const removeContactHandler = (id) => {
+  const removeContactHandler = async (id) => {
+    await api.delete(`/contacts/${id}`)
     const newContactList = contacts.filter((contact) => {
       return contact.id !== id;
     });
@@ -83,6 +89,12 @@ function App() {
           <Route
             path="/add"
             element={<AddContact addContactHandler={addContactHandler} />}
+          />
+          <Route
+            path="/edit"
+            render= {(props)=>(
+              <EditContact{...props} updateContactHandler={updateContactHandler} />
+            )}
           />
         </Routes>
       </BrowserRouter>
